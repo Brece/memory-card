@@ -1,11 +1,46 @@
-let cards = [
+import uniqid from 'uniqid';
+
+import imageURL from '../assets/logo.png';
+
+let cardsLibrary = [
     {
-        image: 'url',
+        url: imageURL,
         text: 'xxx',
-        clicked: false
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: imageURL,
+        text: 'yyy',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: imageURL,
+        text: 'zzz',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: imageURL,
+        text: 'xxx',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: imageURL,
+        text: 'yyy',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: imageURL,
+        text: 'zzz',
+        clicked: false,
+        id: uniqid()
     }
 ];
 
-const randomNumber = () => Math.floor(Math.random() * 9);
+const randomNumber = () => Math.floor(Math.random() * cardsLibrary.length);
 
-export { cards, randomNumber };
+export { cardsLibrary, randomNumber };

@@ -56,4 +56,43 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.u-offset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.c-gameboard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 40px;
+  background-color: goldenrod;
+}
+
+.c-card {
+  width: calc(33% - 40px);
+  margin: 0 20px 40px;
+  text-align: center;
+  border: 1px solid #000;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.c-card img {
+  width: 100%;
+}
+
+.c-card p {
+  margin-bottom: 20px;
+}
+
+.c-card:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
 /*# sourceMappingURL=main.css.map */
