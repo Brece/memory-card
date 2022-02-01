@@ -5,42 +5,49 @@ import imageURL from '../assets/logo.png';
 const cardsLibrary = [
     {
         url: imageURL,
-        text: 'xxx',
+        text: '1',
         clicked: false,
         id: uniqid()
     },
     {
         url: imageURL,
-        text: 'yyy',
+        text: '2',
         clicked: false,
         id: uniqid()
     },
     {
         url: imageURL,
-        text: 'zzz',
+        text: '3',
         clicked: false,
         id: uniqid()
     },
     {
         url: imageURL,
-        text: 'xxx',
+        text: '4',
         clicked: false,
         id: uniqid()
     },
     {
         url: imageURL,
-        text: 'yyy',
+        text: '5',
         clicked: false,
         id: uniqid()
     },
     {
         url: imageURL,
-        text: 'zzz',
+        text: '6',
         clicked: false,
         id: uniqid()
     }
 ];
 
-const randomNumber = () => Math.floor(Math.random() * cardsLibrary.length);
+// const randomNumber = () => Math.floor(Math.random() * cardsLibrary.length);
 
-export { cardsLibrary, randomNumber };
+const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+export { cardsLibrary, shuffleArray };

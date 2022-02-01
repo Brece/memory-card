@@ -1,8 +1,7 @@
 import React from 'react';
 
 export default function Card (props) {
-    const handleClick = (e) => {
-        e.stopPropagation();
+    const handleClick = () => {
         if (props.card.clicked) {
             // reset game
             props.handleReset();

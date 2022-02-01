@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './styles/main.css';
-import { cardsLibrary, randomNumber } from './helper/cards';
+import { cardsLibrary } from './helper/cards';
 import GameBoard from './components/GameBoard';
 
 const createInitialLibrary = () => {
+	// deep cloning an array of objects by value
 	const defaultLibrary = cardsLibrary.map((item) => {
 		return {...item};
 	});
-	console.log(defaultLibrary);
 	return defaultLibrary;
 }
 
