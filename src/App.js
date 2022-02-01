@@ -15,6 +15,7 @@ export default function App() {
 	const [score, setScore] = useState(0);
 	const [bestScore, setBestScore] = useState(0);
 	const [cards, setCards] = useState(createInitialLibrary());
+	const [gameMessage, setGameMessage] = useState('YOU LOSE!');
 
 	const handleScore = () => {
 		const currentScore = score + 1;
@@ -28,6 +29,7 @@ export default function App() {
 	const handleReset = () => {
 		setScore(0);
 		setCards(createInitialLibrary());
+		setGameMessage('YOU LOSE!');
 	}
 
 	const handleChange = (clickedCard) => {
@@ -37,14 +39,36 @@ export default function App() {
 			}
 			return item;
 		});
-
+		
 		setCards(updatedCards);
 		handleScore();
+	}
+
+	const checkWinningGame = (array) => {
+		const checkedArray = array.filter((item) => item.clicked !== true);
+
+		if (checkedArray.length === 0) {
+			setGameMessage('YOU WIN!');
+			return true;
+		}
+		return false;
+	}
+
+	// TODO: handle losing game, pop-up with message and best score
+	const checkLosingGame = () => {
+		handleReset();
+		
 	}
 
 	useEffect(() => {
 		// shuffle cards state on re-rendering
 		setCards(shuffleArray(cards));
+
+		// check for win
+		if (checkWinningGame(cards)) {
+			// TODO: open winning message or pop-up
+			
+		}
 	}, [cards]);
 
 	return (
@@ -56,7 +80,7 @@ export default function App() {
 					<p>Best Score: {bestScore}</p>
 				</div>
 			</section>
-			<GameBoard cards={cards} handleChange={handleChange} handleReset={handleReset} />
+			<GameBoard cards={cards} handleChange={handleChange} checkLosingGame={checkLosingGame} />
 		</div>
 	);
 }

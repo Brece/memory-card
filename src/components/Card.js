@@ -4,7 +4,7 @@ export default function Card (props) {
     const handleClick = () => {
         if (props.card.clicked) {
             // reset game
-            props.handleReset();
+            props.checkLosingGame();
             return;
         }
         props.handleChange(props.card);
