@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Card (props) {
-    const [clicked, setClicked] = useState(props.card.clicked);
-
-    const handleClick = () => {
-        if (clicked) {
+    const handleClick = (e) => {
+        e.stopPropagation();
+        if (props.card.clicked) {
             // reset game
+            props.handleReset();
             return;
         }
-        setClicked(true);
+        props.handleChange(props.card);
     }
 
     return (

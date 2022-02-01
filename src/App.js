@@ -3,33 +3,47 @@ import './styles/main.css';
 import { cardsLibrary, randomNumber } from './helper/cards';
 import GameBoard from './components/GameBoard';
 
+const createInitialLibrary = () => {
+	const defaultLibrary = cardsLibrary.map((item) => {
+		return {...item};
+	});
+	console.log(defaultLibrary);
+	return defaultLibrary;
+}
+
 export default function App() {
 	const [score, setScore] = useState(0);
 	const [bestScore, setBestScore] = useState(0);
-	const [cards, setCards] = useState(cardsLibrary);
+	const [cards, setCards] = useState(createInitialLibrary());
 
 	const handleScore = () => {
-		setScore(score + 1);
+		const currentScore = score + 1;
 
-		if (score > bestScore) {
-			setBestScore(score);
+		if (currentScore > bestScore) {
+			setBestScore(currentScore);
 		}
+		setScore(currentScore);
 	}
 
 	const handleReset = () => {
 		setScore(0);
+		setCards(createInitialLibrary());
 	}
 
-	const handleChange = (item) => {
-		// TODO: handle updates for passed in argument 'item'
-		setCards({
-			...cards,
+	const handleChange = (clickedCard) => {
+		const updatedCards = cards.map((item) => {
+			if (item.id === clickedCard.id) {
+				item.clicked = true;
+			}
+			return item;
+		});
 
-		})
+		setCards(updatedCards);
+		handleScore();
 	}
 
 	useEffect(() => {
-
+		// TODO: randomize rendering of cards 
 	});
 
 	return (
@@ -41,7 +55,7 @@ export default function App() {
 					<p>Best Score: {bestScore}</p>
 				</div>
 			</section>
-			<GameBoard cards={cards} />
+			<GameBoard cards={cards} handleChange={handleChange} handleReset={handleReset} />
 		</div>
 	);
 }

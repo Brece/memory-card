@@ -2,7 +2,7 @@ import uniqid from 'uniqid';
 
 import imageURL from '../assets/logo.png';
 
-let cardsLibrary = [
+const cardsLibrary = [
     {
         url: imageURL,
         text: 'xxx',
