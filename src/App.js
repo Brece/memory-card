@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './styles/main.css';
-import { cardsLibrary } from './helper/cards';
+import { cardsLibrary, shuffleArray } from './helper/cards';
 import GameBoard from './components/GameBoard';
 
 const createInitialLibrary = () => {
@@ -43,8 +43,9 @@ export default function App() {
 	}
 
 	useEffect(() => {
-		// TODO: randomize rendering of cards 
-	});
+		// shuffle cards state on re-rendering
+		setCards(shuffleArray(cards));
+	}, [cards]);
 
 	return (
 		<div className='c-app'>

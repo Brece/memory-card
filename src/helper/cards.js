@@ -44,10 +44,12 @@ const cardsLibrary = [
 // const randomNumber = () => Math.floor(Math.random() * cardsLibrary.length);
 
 const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
+    let shuffledArray = array;
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
+    return shuffledArray;
 }
 
 export { cardsLibrary, shuffleArray };
