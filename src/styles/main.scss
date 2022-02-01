@@ -13,7 +13,9 @@ $font-size-xlarge: 42px;
 
 .u-offset { display: flex; flex-wrap: wrap; margin-left: -$hspace; margin-right: -$hspace; }
 
-.c-app { position: relative; overflow: hidden; }
+.c-app { position: relative; width: 100%; height: 100vh; overflow: hidden; }
+.c-app.is-blocked::before { bottom: 0; }
+.c-app::before { position: absolute; content: ''; top: 0; left: 0; right: 0; background-color: rgba(74, 74, 74, 0.584); z-index: 2; }
 
 .c-gameboard { max-width: 900px; margin: 0 auto; padding: $vspace*2 $hspace*2; background-color: goldenrod; }
 

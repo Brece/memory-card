@@ -69,7 +69,7 @@ export default function App() {
 	}, [cards]);
 
 	return (
-		<div className='c-app'>
+		<div className={`c-app${ popupIsActive ? ' is-blocked' : '' }`}>
 			<section className='c-app__header'>
 				<h1>Memory Card Game</h1>
 				<div className='c-app__header__score'>
