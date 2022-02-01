@@ -67,6 +67,11 @@ table {
   margin-right: -20px;
 }
 
+.c-app {
+  position: relative;
+  overflow: hidden;
+}
+
 .c-gameboard {
   max-width: 900px;
   margin: 0 auto;
@@ -94,5 +99,45 @@ table {
 .c-card:hover {
   cursor: pointer;
   scale: 1.1;
+}
+
+.c-message {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translate(-50%, 200%);
+          transform: translate(-50%, 200%);
+  z-index: 5;
+  width: 400px;
+  height: 350px;
+  padding: 20px 40px;
+  text-align: center;
+  background-color: beige;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.c-message.is-active {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.c-message__btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.c-message__btn:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

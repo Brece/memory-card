@@ -13,10 +13,18 @@ $font-size-xlarge: 42px;
 
 .u-offset { display: flex; flex-wrap: wrap; margin-left: -$hspace; margin-right: -$hspace; }
 
+.c-app { position: relative; overflow: hidden; }
+
 .c-gameboard { max-width: 900px; margin: 0 auto; padding: $vspace*2 $hspace*2; background-color: goldenrod; }
 
 .c-card { width: calc(33% - #{$hspace * 2}); margin: 0 $hspace $vspace*2; text-align: center; border: 1px solid #000; transition: all .2s ease-in-out;
     img { width: 100%; }
     p { margin-bottom: $vspace; }
     &:hover { cursor: pointer; scale: 1.1; }
+}
+
+.c-message { position: absolute; top: 50vh; left: 50vw; transform: translate(-50%, 200%); z-index: 5; width: 400px; height: 350px; padding: $vspace $hspace*2; text-align: center; background-color: beige; transition: transform 1s ease-in-out; }
+.c-message.is-active { transform: translate(-50%, -50%); }
+.c-message__btn { position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; padding: 5px; border-radius: 50%; background-color: red; font-size: $font-size-medium; font-weight: bold;
+    &:hover { cursor: pointer; }
 }
