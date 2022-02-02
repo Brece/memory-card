@@ -34,11 +34,8 @@ export default function App() {
 	const handleReset = () => {
 		setPopupIsActive(false);
 		setCards(createInitialLibrary(difficulty));
-
-		setTimeout(() => {
-			setScore(0);
-			setGameMessage('YOU LOSE!');
-		}, 1000);
+		setScore(0);
+		setGameMessage('YOU LOSE!');
 	}
 
 	const handleChange = (clickedCard) => {

@@ -26,7 +26,7 @@ $color-highlight: #ffbd78;
 .c-app { position: relative; width: 100%; min-height: 100vh; background-color: rgb(183, 183, 250); background: rgb(2,0,36); background: linear-gradient(180deg, rgba(2,0,36,1) 16%, rgba(255,139,205,1) 44%, rgba(0,133,192,1) 100%); }
 .c-app.is-blocked::before { bottom: 0; }
 .c-app::before { position: absolute; content: ''; top: 0; left: 0; right: 0; background-color: rgba(74, 74, 74, 0.584); z-index: 2; backdrop-filter: blur(5px); }
-.c-app__header { display: flex; flex-direction: row; margin-bottom: $vspace*2; padding: $vspace*2 0; justify-content: space-between; color: #fff;
+.c-app__header { display: flex; flex-direction: row; margin: 0 $hspace*2 $vspace*2; padding: $vspace*2 0; justify-content: space-between; color: #fff;
     form { display: flex; align-items: flex-end; font-size: $font-size; font-weight: bold;
         label { margin-right: $hspace/2; }
     }
@@ -61,4 +61,10 @@ $color-highlight: #ffbd78;
 .c-message.is-active { transform: translate(-50%, -50%); }
 .c-message__btn { position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; padding: 5px; border-radius: 50%; background-color: $color-highlight; font-size: $font-size-medium; font-weight: bold; color: #fff;
     &:hover { cursor: pointer; }
+}
+
+@media screen and (max-width: 900px) {
+    .c-app__header { flex-direction: column; }
+    .c-app__header__info { width: 100%; margin-bottom: $vspace; }
+    .c-app__header__score { margin-bottom: $vspace; }
 }
