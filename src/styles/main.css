@@ -212,7 +212,8 @@ table {
 
 .c-card:hover {
   cursor: pointer;
-  scale: 1.1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   box-shadow: 0px 0px 36px 15px rgba(255, 189, 120, 0.5);
   -webkit-box-shadow: 0px 0px 36px 15px rgba(255, 189, 120, 0.5);
   -moz-box-shadow: 0px 0px 36px 15px rgba(255, 189, 120, 0.5);
