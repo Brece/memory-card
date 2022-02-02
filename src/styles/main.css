@@ -63,15 +63,16 @@ table {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin: 0 auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .c-app {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .c-app.is-blocked::before {
@@ -89,23 +90,25 @@ table {
 }
 
 .c-gameboard {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 40px 40px;
-  background-color: goldenrod;
 }
 
 .c-card {
-  width: calc(33% - 40px);
+  width: 140px;
   margin: 0 20px 40px;
   text-align: center;
   border: 1px solid #000;
+  border-radius: 20px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
 .c-card img {
   width: 100%;
+  height: 70%;
+  margin-bottom: 10px;
 }
 
 .c-card p {
@@ -121,8 +124,8 @@ table {
   position: absolute;
   top: 50vh;
   left: 50vw;
-  -webkit-transform: translate(-50%, 200%);
-          transform: translate(-50%, 200%);
+  -webkit-transform: translate(-50%, -300%);
+          transform: translate(-50%, -300%);
   z-index: 5;
   width: 400px;
   height: 350px;

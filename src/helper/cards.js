@@ -1,41 +1,88 @@
 import uniqid from 'uniqid';
 
-import imageURL from '../assets/logo.png';
+import camel from '../assets/camel.png';
+import lizard from '../assets/lizard.png';
+import dog from '../assets/dog.png';
+import crocodile from '../assets/crocodile.png';
+import chicken from '../assets/chicken.png';
+import spider from '../assets/spider.png';
+import shark from '../assets/shark.png';
+import mouse from '../assets/mouse.png';
+import wolf from '../assets/wolf.png';
+import greatEgret from '../assets/great-egret.png';
+import elephant from '../assets/elephant.png';
+import lion from '../assets/lion.png';
 
 const cardsLibrary = [
     {
-        url: imageURL,
-        text: '1',
+        url: camel,
+        text: 'Camel',
         clicked: false,
         id: uniqid()
     },
     {
-        url: imageURL,
-        text: '2',
+        url: lizard,
+        text: 'Lizard',
         clicked: false,
         id: uniqid()
     },
     {
-        url: imageURL,
-        text: '3',
+        url: dog,
+        text: 'Dog',
         clicked: false,
         id: uniqid()
     },
     {
-        url: imageURL,
-        text: '4',
+        url: crocodile,
+        text: 'Crocodile',
         clicked: false,
         id: uniqid()
     },
     {
-        url: imageURL,
-        text: '5',
+        url: chicken,
+        text: 'Chicken',
         clicked: false,
         id: uniqid()
     },
     {
-        url: imageURL,
-        text: '6',
+        url: spider,
+        text: 'Spider',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: shark,
+        text: 'Shark',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: mouse,
+        text: 'Mouse',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: wolf,
+        text: 'Wolf',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: greatEgret,
+        text: 'Great-Egret',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: elephant,
+        text: 'Elephant',
+        clicked: false,
+        id: uniqid()
+    },
+    {
+        url: lion,
+        text: 'Lion',
         clicked: false,
         id: uniqid()
     }
