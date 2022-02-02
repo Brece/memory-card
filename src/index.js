@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './fonts/Montserrat-Regular.ttf';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

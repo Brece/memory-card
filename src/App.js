@@ -32,11 +32,13 @@ export default function App() {
 	}
 
 	const handleReset = () => {
-		// TODO: possibly delay with setTimeOut for one second, reset values are currently visible in popup window while closing
-		setScore(0);
-		setCards(createInitialLibrary(difficulty));
-		setGameMessage('YOU LOSE!');
 		setPopupIsActive(false);
+		setCards(createInitialLibrary(difficulty));
+
+		setTimeout(() => {
+			setScore(0);
+			setGameMessage('YOU LOSE!');
+		}, 1000);
 	}
 
 	const handleChange = (clickedCard) => {
@@ -79,26 +81,28 @@ export default function App() {
 
 	return (
 		<div className={`c-app${ popupIsActive ? ' is-blocked' : '' }`}>
-			<section className='c-app__header'>
-				<div>
-					<h1>Memory Card Game</h1>
-					<p>RULES: Memorize the cards that you've already clicked on. Each card may only be clicked on once. If you manage to remember all you card selections you win. Increase your difficulty if you are looking for a challenge.</p>
-				</div>
-				<div className='c-app__header__score'>
-					<p>Score: {score}</p>
-					<p>Best Score: {bestScore}</p>
-				</div>
-				<form>
-					<label htmlFor='difficulty'>Select Difficulty:</label>
-					<select id='difficulty' name='difficulty' onChange={handleDifficultySelection}>
-						<option value='4' defaultValue>Easy</option>
-						<option value='8'>Medium</option>
-						<option value='12'>Hard</option>
-					</select>
-				</form>
-			</section>
-			<GameBoard cards={cards} handleChange={handleChange} checkLosingGame={checkLosingGame} />
-			<Message gameMessage={gameMessage} bestScore={bestScore} score={score} popupIsActive={popupIsActive} handleReset={handleReset} />
+			<div className='o-wrap'>
+				<section className='c-app__header'>
+					<div className='c-app__header__info'>
+						<h1>Memory Card Game</h1>
+						<p><span>RULES:</span> Memorize the cards that you've already clicked on. Each card may only be clicked on once. If you manage to remember all you card selections you win. Increase your difficulty if you are looking for a challenge.</p>
+					</div>
+					<div className='c-app__header__score'>
+						<p>Score: <span>{score}</span></p>
+						<p>Best Score: <span>{bestScore}</span></p>
+					</div>
+					<form>
+						<label htmlFor='difficulty'>Select Difficulty:</label>
+						<select id='difficulty' name='difficulty' onChange={handleDifficultySelection}>
+							<option value='4' defaultValue>Easy</option>
+							<option value='8'>Medium</option>
+							<option value='12'>Hard</option>
+						</select>
+					</form>
+				</section>
+				<GameBoard cards={cards} handleChange={handleChange} checkLosingGame={checkLosingGame} />
+				<Message gameMessage={gameMessage} bestScore={bestScore} score={score} popupIsActive={popupIsActive} handleReset={handleReset} />
+			</div>
 		</div>
 	);
 }
