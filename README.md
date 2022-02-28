@@ -1,6 +1,6 @@
 This is an assignment of TheOdinProject:
 
-    https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/memory-card
+https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/memory-card
 
 This project is Memory Card game where you win by memorizing the cards that you've already clicked on.
 
