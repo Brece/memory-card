@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.289a39cf.css",
+    "main.js": "/memory-card/static/js/main.7f5c8e30.js",
+    "static/js/787.d6a8b40f.chunk.js": "/memory-card/static/js/787.d6a8b40f.chunk.js",
+    "static/media/Montserrat-Regular.ttf": "/memory-card/static/media/Montserrat-Regular.ac98a5f5ca71180fe293.ttf",
+    "static/media/camel.png": "/memory-card/static/media/camel.9a2ed6cb91fa798e3db3.png",
+    "static/media/lizard.png": "/memory-card/static/media/lizard.94184bc94cadfdf303a3.png",
+    "static/media/crocodile.png": "/memory-card/static/media/crocodile.9d7f54eba7ceecfe5f1a.png",
+    "static/media/wolf.png": "/memory-card/static/media/wolf.e205fb8d9d07b5b05273.png",
+    "static/media/spider.png": "/memory-card/static/media/spider.5573c3446dc16cb5905f.png",
+    "static/media/chicken.png": "/memory-card/static/media/chicken.9a333c0ef898e68d307c.png",
+    "static/media/dog.png": "/memory-card/static/media/dog.08adb1feefc44a8f230e.png",
+    "index.html": "/memory-card/index.html",
+    "main.289a39cf.css.map": "/memory-card/static/css/main.289a39cf.css.map",
+    "main.7f5c8e30.js.map": "/memory-card/static/js/main.7f5c8e30.js.map",
+    "787.d6a8b40f.chunk.js.map": "/memory-card/static/js/787.d6a8b40f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.289a39cf.css",
+    "static/js/main.7f5c8e30.js"
+  ]
+}
