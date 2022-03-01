@@ -13,3 +13,8 @@ This project is Memory Card game where you win by memorizing the cards that you'
     - Javascript
     - CSS
     - HTML
+
+
+LIVE DEMO:
+
+https://brece.github.io/memory-card/
