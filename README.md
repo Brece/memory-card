@@ -1,6 +1,8 @@
-This is an assignment of TheOdinProject:
+# Memory Card
+![Project Preview](/public/memory-card.png)
+[**LIVE version**](https://brece.github.io/memory-card)
 
-https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/memory-card
+This is an assignment of [TheOdinProject](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/memory-card):
 
 This project is Memory Card game where you win by memorizing the cards that you've already clicked on.
 
@@ -13,8 +15,3 @@ This project is Memory Card game where you win by memorizing the cards that you'
     - Javascript
     - CSS
     - HTML
-
-
-LIVE DEMO:
-
-https://brece.github.io/memory-card/
